@@ -1,0 +1,30 @@
+{% extends "hidden/base.html" %}
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">User ID</th>
+      <th scope="col">Password</th>
+    </tr>
+  </thead>
+  {% for obj in obj %}
+  <tbody>
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{obj.username}}</td>
+      <td>{{obj.user_id}}</td>
+      <td>{{obj.password}}</td>
+    </tr>
+  </tbody>
+  {% endfor %}
+</table>
+
+{% else %}
+<h1>Page not found!!</h1>
+{% endif %}
+{% endblock content %}

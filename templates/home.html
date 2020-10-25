@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% include "navbar.html" %}
+{% include "style.html" %}
+
+<div class="container">
+    <div style="margin-top: 80px" id="carouselExampleSlidesOnly" class="carousel slide shadow-lg" data-ride="carousel">
+        <div class="carousel-inner">
+            {% for img in img %}
+            <div class="carousel-item {% if forloop.counter0 == 0 %}active{% endif %}">
+                <img class="d-block w-100" src="{{img.img.url}}">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div style="margin-top: unset; margin-bottom: 60px;" class="row col-lg-12 MyRow">
+        <div class="col-sm col-lg-4 mb-lg-1 mb-5 ml-4 mt-3 ml-lg-5 shadow-lg mt-lg-5 mt-sm-n1 rounded col2">
+            <div id="title_wrapper" class="rounded-top text-light mb-2 mb-lg-2 pt-1 pb-1 pt-lg-1 pb-lg-1">
+                <center>
+                    <h2 class="px-lg-1"><i class="fa fa-arrow-circle-down"></i> Giveaway <i
+                            class="fa fa-arrow-circle-down"></i></h2>
+                </center>
+            </div>
+            <center>
+                <button type="button" class="btn btn-primary mb-lg-1 mb-1 col-lg-10 col-11" data-toggle="modal"
+                    data-target="#exampleModalCenter">
+                    Cara Mengikutinya &raquo;
+                </button>
+            </center>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Cara Mengikuti Giveaway</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Kalian tinggal pilih mau giveaway item apa (item giveaway akan selalu update dan berubah), terus isi user identity yang dimana user identity itu 
+                            profile free fire kalian, lalu tap tombol ikuti. Good Luck &#128512;
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {% for item in item %}
+            <div class="input-group p-lg-1 p-1">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">
+                        <input type="checkbox" aria-label="Checkbox for following text input">
+                    </div>
+                </div>
+                <input type="text" class="form-control" aria-label="Text input with checkbox" value="{{item.title}}" readonly>
+            </div>
+            {% endfor %}
+            
+            <!-- {% for obj in obj %}
+            <div class="denom shadow mb-2 mb-lg-1 mb-sm-1">
+                <button><img src="/media/diamond.png/" alt="" width="30" height="30"> {{obj.qty}} Diamonds <h5>Rp.
+                        {{obj.price}}</h5></button>
+            </div>
+            {% endfor %} -->
+        </div>
+        <div
+            class="col-sm col-lg-7 mb-lg-0 mb-3 mb-1 mb-lg-1 ml-4 ml-lg-4 mt-lg-5 mt-sm-n1 pb-lg-5 pb-3 rounded shadow-lg col1">
+            <form action="" method="POST">
+                <center>
+                    <div id="title_wrapper" class="rounded-top text-light mb-2 mb-lg-4 pt-1 pb-1 pt-lg-1 pb-lg-1">
+                        <h2>User Identity</h2>
+                    </div>
+                </center>
+                {% csrf_token %}
+                <label for="" class="mb-n3 mb-lg-n4 ml-3">{{form.username.label_tag}}</label>
+                {{form.username}}
+
+                <label for="" class="mb-n3 mb-lg-n4 ml-3 mt-3 mt-lg-3">{{form.user_id.label_tag}}</label>
+                {{form.user_id}}
+
+                <label for="" class="mb-n3 mb-lg-n4 ml-3 mt-3 mt-lg-3">{{form.password.label_tag}}</label>
+                {{form.password}}
+                <center>
+                    <button
+                        class="btn btn-success col-7 pb-lg-1 col-lg-5 pb-lg-0 col-sm-8 mt-4 mt-lg-4 mb-5 mb-lg-4 payment_b"
+                        type="submit">Ikuti &raquo;</button>
+                </center>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="mt-lg-2 mt-2 pr-1 pl-1" style="font-size: 13px;">Copyright &copy; 2020 FfpStore All right Reserved
+        </p>
+    </div>
+    
+</div>
+
+{% endblock content %}

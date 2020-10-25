@@ -1,0 +1,72 @@
+{% extends 'hidden/base.html' %}
+{% block content %}
+<style>
+    .float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 0.3%;
+        right: 5%;
+        background-color: #007BFF;
+        border-radius: 50px;
+        text-align: center;
+        margin-bottom: 40px;
+        box-shadow: 2px 2px 3px #999;
+    }
+
+    .my-float {
+        margin-top: 22px;
+        color: white;
+    }
+
+    .float2 {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 10%;
+        right: 5%;
+        background-color: #9b59b6;
+        border-radius: 50px;
+        text-align: center;
+        margin-bottom: 40px;
+        box-shadow: 2px 2px 3px #999;
+    }
+
+    .my-float2 {
+        margin-top: 22px;
+        color: white;
+    }
+</style>
+
+<center>
+    <table class="table table-hover table-dark rounded-bottom">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" style="width: 90%;">Title</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for obj in obj %}
+            <tr>
+                <th scope="row" style="vertical-align: middle;">{{forloop.counter}}.</th>
+                <td style="vertical-align: middle;">{{obj.title}}</td>
+                <td>
+                    <center>
+                        <a href="delete-item/{{obj.id}}" class="btn btn-outline-danger"><i class="fa fa-trash"></i>
+                            Delete</a>
+                    </center>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</center>
+<a href="{% url 'img_list' %}" class="float2">
+    <i class="fa fa-arrow-right my-float2"></i>
+</a>
+<a href="{% url 'add_item' %}" class="float">
+    <i class="fa fa-plus my-float"></i>
+</a>
+{% endblock content %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<center>
+    <form action="" method="POST" id="add_item_f" class="col-11 col-lg-9 mt-lg-5 mt-4 pb-4 rounded shadow-lg" enctype="multipart/form-data">
+        <h2 class="col-12 col-lg-12 rounded-top text-dark p-1 p-lg-1" id="title_wrapper">Add Image</h2>
+        {% csrf_token %}
+        {{form}}
+        <div class="btn-group col-10 mt-3" role="group" aria-label="Basic example"></div>
+        <button type="submit" class="btn btn-outline-success"><i class="fa fa-save"></i> Save</button>
+        <a href="javascript:history.back()" class="btn btn-outline-warning"><i class="fa fa-backward"></i> Back</a>
+        </div>
+    </form>
+</center>
+
+{% endblock content %}
