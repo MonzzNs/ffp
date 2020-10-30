@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '3h4--x@bl5(6^z94-m$$6a@j)hsk75z^+b^8dz4+)5*xu$1j4y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["127.0.0.1", "https://ffpstore.herokuapp.com", "192.168.0.105"]
 
