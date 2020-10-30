@@ -48,7 +48,6 @@ jedi==0.17.2
 jmespath==0.10.0
 jupyter-client==6.1.7
 jupyter-core==4.6.3
-kaki==0.1.4
 kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
 lxml==4.5.2
