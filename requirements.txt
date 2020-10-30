@@ -66,7 +66,7 @@ mccabe==0.6.1
 monotonic==1.5
 mysql-client==0.0.1
 mysql-connector-python==8.0.21
-mysqlclient @ file:///C:/python-project/mysqlclient-1.4.6-cp38-cp38-win32.whl
+mysqlclient==2.0.1
 numpy==1.19.1
 opencv-python==4.4.0.42
 parsel==1.6.0
