@@ -6,10 +6,14 @@
         <h2 class="col-12 col-lg-12 rounded-top text-dark p-1 p-lg-1" id="title_wrapper">Add Item</h2>
         {% csrf_token %}
         {{form}}
+        
         <div class="btn-group col-10 mt-3" role="group" aria-label="Basic example"></div>
+        <center>
             <button type="submit" class="btn btn-outline-success"><i class="fa fa-save"></i> Save</button>
             <a href="javascript:history.back()" class="btn btn-outline-warning"><i class="fa fa-backward"></i> Back</a>
+        </center>
         </div>
+        
     </form>
 </center>
 {% endblock content %}
