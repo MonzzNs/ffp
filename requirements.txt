@@ -37,7 +37,6 @@ gunicorn==20.0.4
 html5lib==1.1
 hyperlink==20.0.1
 idna==2.10
-importlib==1.0.4
 incremental==17.5.0
 ipykernel==5.3.4
 ipython==7.18.1
@@ -49,15 +48,6 @@ jedi==0.17.2
 jmespath==0.10.0
 jupyter-client==6.1.7
 jupyter-core==4.6.3
-kaki==0.1.4
-kivy==2.0.0rc1
-kivy-deps.angle==0.1.10
-kivy-deps.glew==0.1.12
-kivy-deps.gstreamer==0.1.18
-kivy-deps.sdl2==0.1.23
-Kivy-examples==1.11.1
-Kivy-Garden==0.1.4
-kivymd @ https://github.com/kivymd/KivyMD/archive/master.zip
 kiwisolver==1.2.0
 lazy-object-proxy==1.4.3
 lxml==4.5.2
@@ -85,18 +75,11 @@ pyasn1-modules==0.2.8
 pycodestyle==2.6.0
 pycparser==2.20
 PyDispatcher==2.0.5
-pygame==1.9.6
 Pygments==2.7.1
 PyHamcrest==2.0.2
 pylint==2.4.4
-pyOpenSSL==19.1.0
-pyparsing==2.4.7
-PyPDF2==1.26.0
-Pyphen==0.9.5
-pypiwin32==223
 python-dateutil==2.8.1
-pytz==2019.3
-pywin32==228
+pytz==2020.1
 pyzmq==19.0.2
 queuelib==1.5.0
 reportlab==3.5.51
